@@ -9,7 +9,7 @@ package Interfaces;
  *
  * @author DANIS
  */
-public class InterfacePersonal extends javax.swing.JFrame {
+public class InterfacePersonal extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form InterfacePersonal
@@ -49,7 +49,9 @@ public class InterfacePersonal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("PERSONAL");
+        setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icoPersonal.png"))); // NOI18N
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
