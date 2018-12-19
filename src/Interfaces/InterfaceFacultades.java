@@ -9,14 +9,13 @@ package Interfaces;
  *
  * @author Usuario
  */
-public class InterfaceFacultades extends javax.swing.JFrame {
+public class InterfaceFacultades extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form InterfaceFacultades
      */
     public InterfaceFacultades() {
         initComponents();
-        this.setLocationRelativeTo(null);
         jtxaNombre.setLineWrap(true);
         jtxaDescripcion.setLineWrap(true);
         txtCodigo.setVisible(false);
@@ -73,6 +72,11 @@ public class InterfaceFacultades extends javax.swing.JFrame {
         jButton5.setText("SALIR");
 
         jButton6.setText("CARRERAS");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -219,6 +223,13 @@ public class InterfaceFacultades extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.out.println("commit");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        InterfaceCarreras ventanaCarreras=new InterfaceCarreras();
+        InterfazPrincipal.jdspPrincipal.add(ventanaCarreras);
+        ventanaCarreras.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton6ActionPerformed
 
     /**
      * @param args the command line arguments
