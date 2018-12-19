@@ -225,10 +225,10 @@ public class InterfaceFacultades extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-//        InterfaceCarreras ventanaCarreras=new InterfaceCarreras();
-//        InterfacePrincipal.jdspPrincipal.add(ventanaCarreras);
-//        ventanaCarreras.setVisible(true);
-//        this.dispose();
+        InterfaceCarreras ventanaCarreras=new InterfaceCarreras();
+        InterfacePrincipal.jdspPrincipal.add(ventanaCarreras);
+        ventanaCarreras.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     /**

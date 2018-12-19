@@ -6,7 +6,6 @@
 package Interfaces;
 
 import static java.awt.Frame.MAXIMIZED_BOTH;
-import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
@@ -20,7 +19,8 @@ public class InterfacePrincipal extends javax.swing.JFrame {
     /**
      * Creates new form InterfazPrincipal
      */
-    public InputStream fondo = this.getClass().getResourceAsStream("/imagenes/fondo.jpg");
+    public InputStream fondo = this.getClass().getResourceAsStream("../Imagenes/fondo.jpg");
+
     public InterfacePrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -28,7 +28,8 @@ public class InterfacePrincipal extends javax.swing.JFrame {
         cargarImagen(jdspPrincipal, fondo);
         //setIconImage(Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/imagenes/icoPrin.png")));
     }
- public void cargarImagen(javax.swing.JDesktopPane jDeskp, InputStream fileImagen) {
+
+    public void cargarImagen(javax.swing.JDesktopPane jDeskp, InputStream fileImagen) {
         try {
             BufferedImage image = ImageIO.read(fileImagen);
             jDeskp.setBorder(new grados.Fondo(image));
@@ -36,6 +37,7 @@ public class InterfacePrincipal extends javax.swing.JFrame {
             System.out.println("Imagen no disponible");
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,6 +51,7 @@ public class InterfacePrincipal extends javax.swing.JFrame {
         jdspPrincipal = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +68,11 @@ public class InterfacePrincipal extends javax.swing.JFrame {
         );
 
         jMenu1.setText("Interfaces");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("Facultades");
+        jMenu1.add(jMenuItem1);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Reportes");
@@ -126,7 +134,8 @@ public class InterfacePrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JDesktopPane jdspPrincipal;
+    public static javax.swing.JDesktopPane jdspPrincipal;
     // End of variables declaration//GEN-END:variables
 }
