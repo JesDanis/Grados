@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Usuario
@@ -51,7 +53,7 @@ public class InterfaceFacultades extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("FACULTADES");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -70,6 +72,11 @@ public class InterfaceFacultades extends javax.swing.JInternalFrame {
         jButton4.setText("CANCELAR");
 
         jButton5.setText("SALIR");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setText("CARRERAS");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -227,9 +234,16 @@ public class InterfaceFacultades extends javax.swing.JInternalFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         InterfaceCarreras ventanaCarreras=new InterfaceCarreras();
         InterfacePrincipal.jdspPrincipal.add(ventanaCarreras);
+        Dimension desktopSize = InterfacePrincipal.jdspPrincipal.getSize();
+        Dimension FrameSize = ventanaCarreras.getSize();
+        ventanaCarreras.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
         ventanaCarreras.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

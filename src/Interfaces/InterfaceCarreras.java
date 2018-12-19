@@ -5,6 +5,8 @@
  */
 package Interfaces;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author Usuario
@@ -262,6 +264,9 @@ public class InterfaceCarreras extends javax.swing.JInternalFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         InterfaceFacultades ventanaFacultades = new InterfaceFacultades();
         InterfacePrincipal.jdspPrincipal.add(ventanaFacultades);
+        Dimension desktopSize = InterfacePrincipal.jdspPrincipal.getSize();
+        Dimension FrameSize = ventanaFacultades.getSize();
+        ventanaFacultades.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
         ventanaFacultades.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed

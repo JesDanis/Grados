@@ -5,6 +5,7 @@
  */
 package Interfaces;
 
+import java.awt.Dimension;
 import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
@@ -102,6 +103,9 @@ public class InterfacePrincipal extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         InterfaceFacultades ventanaFacultades=new InterfaceFacultades();
         jdspPrincipal.add(ventanaFacultades);
+        Dimension desktopSize = jdspPrincipal.getSize();
+        Dimension FrameSize = ventanaFacultades.getSize();
+        ventanaFacultades.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
         ventanaFacultades.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
