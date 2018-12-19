@@ -6,7 +6,6 @@
 package Interfaces;
 
 import static java.awt.Frame.MAXIMIZED_BOTH;
-import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.InputStream;
 import javax.imageio.ImageIO;
